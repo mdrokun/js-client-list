@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Client List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+      <h1>Client List</h1>
+      <small>Powered by- JavaScript</small>
+    </div>
+  </nav>
+
+  <div class="container mt-5 pt-3">
+    <div class="row justify-content-between">
+      <div class="col-sm-3">
+        <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+      </div>
+      <div class="col-sm-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myModal">Add New
+          Client</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="row" id="client-lists">
+
+      <!-- <div class="col-md-3 mt-5">
+        <div class="card">
+          <img src="https://cdn.pixabay.com/photo/2014/07/09/10/04/man-388104_960_720.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body py-2 text-center">
+            <h5 class="card-title">John Doe</h5>
+            <p class="card-text">Manager</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Cell No:</strong> 8855443</li>
+            <li class="list-group-item"><strong>Address:</strong> New york city dsf ewr dsf</li>
+          </ul>
+          <div class="card-body p-0">
+            <a href="#" id="delete" class="card-link p-1 bg-light text-center d-block text-danger">Delete</a>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" id="new-client-form">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add New Client</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <form>
+            <div class="row mb-3 justify-content-between">
+              <div class="col-4">
+                <img src="" alt="" class="img-prev border">
+              </div>
+              <div class="col-7 align-middle">
+                <div class="input-group mb-3">
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input inpFile" id="inputGroupFile01"
+                      aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="formGroupExampleInput">Client Name</label> -->
+              <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="formGroupExampleInput2">Designation</label> -->
+              <input type="text" class="form-control" id="designation" placeholder="Designation">
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="formGroupExampleInput2">Designation</label> -->
+              <input type="text" class="form-control" id="cellNumber" placeholder="Cell Number">
+            </div>
+
+            <div class="form-group">
+              <!-- <label for="formGroupExampleInput2">Designation</label> -->
+              <input type="text" class="form-control" id="address" placeholder="Address">
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary add-client">Add Client</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mt-5">
+    <p>&copy; All rights resurved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- ----------------------------------------------------- -->
+  <script src="app.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>

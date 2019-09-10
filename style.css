@@ -1,0 +1,64 @@
+h1 {
+    margin: 0;
+    font-size: 2rem !important;
+}
+
+.navbar {
+    margin-top: 20px;
+}
+
+.navbar small {
+    display: block;
+}
+
+.card h5,
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+.card ul li {
+    padding: 8px 12px;
+}
+
+.card ul li strong {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.animate {
+    animation: .3s animate-col;
+}
+
+@keyframes animate-col {
+    from {
+        margin-left: -100px;
+        margin-right: 100px;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        margin-right: 0;
+        opacity: 1;
+    }
+}
+
+.animate-delete {
+    animation: .5s animate-col-delete;
+}
+
+@keyframes animate-col-delete {
+    to {
+      transform: scale(1);
+      transform: scale(.5);
+      opacity: 0;
+    }
+  }
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px 0 15px;
+    color: #fff;
+    text-align: center;
+}
